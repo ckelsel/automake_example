@@ -58,3 +58,6 @@ src/test
 *.a
 stamp-h2
 _install
+*.bz2
+*.exe
+*.dll
