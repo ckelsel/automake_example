@@ -1,12 +1,10 @@
 
+#include <stdio.h>
 #include "add.h"
-
 #include "del.h"
-
 #include "usage.h"
 
-int main(char* argv[], int argc)
-
+int main(int argc, char **argv)
 {
 
     if (argc > 1)
