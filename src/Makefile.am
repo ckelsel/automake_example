@@ -10,7 +10,6 @@ test_SOURCES=main.c \
 
 
 #test依赖的库文件
-
 test_LDADD=libmymath.la libmystatic_c.a libmycxx_shared.la
 
 include_HEADERS=del.h \
@@ -28,6 +27,8 @@ libmymath_la_SOURCES=add.c
 #static cxx library
 noinst_LIBRARIES = libmystatic_c.a
 libmystatic_c_a_SOURCES = del.c
+# NOTE: XXX
+# libmystatic_c.a 不需要链接libmycxx_shared.la, 而是由test链接libmycxx_shared.la
 # libmystatic_c_a_LIBADD = libmycxx_shared.la
 
 
