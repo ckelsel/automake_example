@@ -1,0 +1,1 @@
+# automake_example
