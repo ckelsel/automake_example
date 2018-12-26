@@ -55,3 +55,6 @@ libtool
 *.o
 *.la
 src/test
+*.a
+stamp-h2
+_install

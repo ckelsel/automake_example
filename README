@@ -4,12 +4,19 @@ $ autoscan
 $ mv configure.scan to configure.ac
 $ vim configure.ac
 
-修改AC_INIT([test], [1.0], BUG-REPORT-ADDRESS)
+#修改
+AC_INIT([test], [1.0], BUG-REPORT-ADDRESS)
 
-增加AM_INIT_AUTOMAKE，初始化automake
+#初始化automake, 增加
+AM_INIT_AUTOMAKE
 
-增加AC_PROG_LIBTOOL，支持库文件
+#支持库文件, 增加
+AC_PROG_LIBTOOL
 
 $ autoreconf --install
 $ ./configure
 $ make
+$ make DESTDIR=`pwd`/_install install
+$ cp _install/usr/local/bin/test _install/usr/local/lib/
+$ cd _install/usr/local/lib
+$ LD_LIBRARY_PATH=./ ./test
