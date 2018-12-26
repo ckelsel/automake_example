@@ -1,0 +1,50 @@
+#include "resource.h"
+
+IDB_MINIMIZE           BITMAP                  "resource/minimize.bmp"
+IDB_MINIMIZE_ACT       BITMAP                  "resource/minimize_active.bmp"
+IDB_LOCK               BITMAP                  "resource/lock.bmp"
+IDB_LOCK_ACT           BITMAP                  "resource/lock_active.bmp"
+IDB_UNLOCK             BITMAP                  "resource/unlock.bmp"
+IDB_UNLOCK_ACT         BITMAP                  "resource/unlock_active.bmp"
+IDB_CLOSE              BITMAP                  "resource/close.bmp"
+IDB_CLOSE_ACT          BITMAP                  "resource/close_active.bmp"
+IDB_RESTORE            BITMAP                  "resource/restore.bmp"
+IDB_RESTORE_ACT        BITMAP                  "resource/restore_active.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <>"
+            VALUE "FileDescription", "TODO: <>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "test.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2018"
+            VALUE "OriginalFilename", "test.exe"
+            VALUE "ProductName", "TODO: <>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END

@@ -13,6 +13,23 @@ AM_INIT_AUTOMAKE
 #支持库文件, 增加
 AC_PROG_LIBTOOL
 
+# check windres
+case "${host}" in
+    *-*-cygwin* )
+        USE_MSW=1
+        ;;
+
+    *-*-mingw32* )
+        USE_MSW=1
+        ;;
+esac
+
+AM_CONDITIONAL(USE_MSW, [test -n "$USE_MSW"])
+
+if test -n "$USE_MSW"; then
+    AC_CHECK_TOOL([WINDRES], [windres], no)
+fi
+
 $ autoreconf --install
 $ ./configure
 $ make

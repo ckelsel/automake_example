@@ -61,3 +61,4 @@ _install
 *.bz2
 *.exe
 *.dll
+*.res_o
