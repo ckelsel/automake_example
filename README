@@ -13,6 +13,10 @@ AM_INIT_AUTOMAKE
 #支持库文件, 增加
 AC_PROG_LIBTOOL
 
+PKG_CHECK_MODULES(PIXMAN, pixman-1 >= 0.17.7)
+AC_SUBST(PIXMAN_CFLAGS)
+AC_SUBST(PIXMAN_LIBS)
+
 $ autoreconf --install
 $ ./configure
 $ make

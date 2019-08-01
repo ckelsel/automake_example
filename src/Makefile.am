@@ -39,3 +39,8 @@ lib_LTLIBRARIES += libmycxx_shared.la
 
 libmycxx_shared_la_SOURCES = mycxx.cpp
 libmycxx_shared_la_LIBADD = -lstdc++
+
+lib_LTLIBRARIES += libvaapi.la
+libvaapi_la_SOURCES = decode-vaapi.c
+libvaapi_la_CFLAGS = ${PIXMAN_CFLAGS}
+
